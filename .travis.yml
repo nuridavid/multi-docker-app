@@ -1,4 +1,5 @@
 # config for travis
+
 sudo: required
 services:
   - docker
@@ -17,7 +18,7 @@ after_success:
 
   #log in to docker cli
 
-  - echo "$DOCKER_PASSWORD" | docker login -u "DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
   #deploy images to docker hub
 

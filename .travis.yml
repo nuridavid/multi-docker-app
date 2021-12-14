@@ -22,7 +22,7 @@ after_success:
 
   #deploy images to docker hub
 
-  - docker push nuridavid/multi-client
   - docker push nuridavid/multi-nginx
   - docker push nuridavid/multi-server
   - docker push nuridavid/multi-worker
+  - docker push nuridavid/multi-client

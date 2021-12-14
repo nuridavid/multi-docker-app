@@ -11,10 +11,10 @@ script:
   - docker run -e CI=true nuridavid/react-test npm test
 
 after_success:
-  - docker build -t nuridavid/multi-client ./client
   - docker build -t nuridavid/multi-nginx ./nginx
   - docker build -t nuridavid/multi-server ./server
   - docker build -t nuridavid/multi-worker ./worker
+  - docker build -t nuridavid/multi-client ./client
 
   #log in to docker cli
 
